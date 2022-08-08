@@ -6,7 +6,7 @@ describe("My First Test", () => {
     //it('name', ()=> {test body})
 
     //*visit(): to go to a website -> go to google website
-    cy.visit("https://wwww.google.com/");
+    cy.visit("https://www.google.com/");
 
     //*url(): for testing url
     //?should('include', 'text') -> does it include the given text?
@@ -17,7 +17,7 @@ describe("My First Test", () => {
   });
 
   it("Title Test", () => {
-    cy.visit("https://wwww.google.com/");
+    cy.visit("https://www.google.com/");
 
     //*title(): for testing title
     //?should('eq', 'text') -> is it equals to the given text?
