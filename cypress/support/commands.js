@@ -23,3 +23,14 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//* Cypress.Commands.add('testName', (param1, param2) => {}) -> reusable method for logging in
+Cypress.Commands.add('login', (email, password) => {
+    cy.visit('http://automationpractice.com/index.php');
+    cy.get('.login').click();
+
+    cy.get('#email').type(email);
+    cy.get('#passwd').type(password);
+
+    cy.get('#SubmitLogin > span').click();
+});
