@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.1",
     "cypress": "^9.7.0",
     "cypress-iframe": "^1.0.1"
   }
