@@ -1,7 +1,13 @@
-import '@4tw/cypress-drag-drop';
+// import '@4tw/cypress-drag-drop';
 
 describe('drag and drop', () => {
-  it('tit', () => {
-    cy.visit('https://www.globalsqa.com/demo-site/draganddrop/');
+  it('title', () => {
+    cy.visit('https://demo.guru99.com/test/simple_context_menu.html');
+
+    //* dblclick() -> double clicks
+    cy.contains('Double-Click Me To See Alert').dblclick();
+    
+    //* rightclick() -> right clicks
+    cy.get('.context-menu-one').rightclick();
   });
 });
