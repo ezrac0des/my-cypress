@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 //* Cypress.Commands.add('testName', (param1, param2) => {}) -> reusable method for logging in
+//? login : log ins to the automationpractice website
 Cypress.Commands.add('login', (email, password) => {
   cy.visit('http://automationpractice.com/index.php');
   cy.get('.login').click();
@@ -42,3 +43,8 @@ Cypress.Commands.add('amazonSearch', (productName) => {
   cy.wait(1000);
   cy.get('#nav-search-submit-button').click();
 });
+
+
+//? https://www.npmjs.com/package/cypress-file-upload
+//TODO npm install --save-dev cypress-file-upload
+import 'cypress-file-upload';

@@ -1,6 +1,6 @@
 describe('custom method try', () => {
   it('positive log in', () => {
-    //* login(p1, p2) -> defined in commands.js, can be used in anywhere in the project
+    //* login(p1, p2) -> defined in support/commands.js, can be used in anywhere in the project
     cy.login('123murat123@gmail.com', '123murat123');
   });
 
