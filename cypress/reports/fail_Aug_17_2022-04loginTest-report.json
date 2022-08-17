@@ -1,0 +1,135 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2022-08-17T06:46:14.190Z",
+    "end": "2022-08-17T06:46:16.019Z",
+    "duration": 1829,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4e298ba9-8b4f-4488-a35f-a8f717576c44",
+      "title": "",
+      "fullFile": "cypress/integration/com.ezra/day02/04loginTest.js",
+      "file": "cypress/integration/com.ezra/day02/04loginTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f38702fd-27fb-475d-b4a6-5a3c0a89c70a",
+          "title": "Log in",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "log in negative",
+              "fullTitle": "Log in log in negative",
+              "timedOut": null,
+              "duration": 849,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://test.iyikisordun.com/login.php');\ncy.get('[type=\"email\"]').type(wrongEmail);\ncy.get('[type=\"password\"]').type(wrongPass);\ncy.get('.btn').click(); //this can be used when we are expecting it to fail\ncy.get('#fail').should('include.text', 'Girdiginiz bilgiler hatalidir');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://test.iyikisordun.com/login.php\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND test.iyikisordun.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://test.iyikisordun.com/login.php\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND test.iyikisordun.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:1118/__cypress/runner/cypress_runner.js:163608:82\n    at visitFailedByErr (http://localhost:1118/__cypress/runner/cypress_runner.js:162912:12)\n    at http://localhost:1118/__cypress/runner/cypress_runner.js:163607:11\n    at tryCatcher (http://localhost:1118/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:1118/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:1118/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:1118/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:1118/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:1118/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:1118/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:1118/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:1118/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:1118/__cypress/tests?p=cypress\\integration\\com.ezra\\day02\\04loginTest.js:105:8)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND test.iyikisordun.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)\n  ",
+                "diff": null
+              },
+              "uuid": "ee105d3b-4372-4326-8745-e59227c325cb",
+              "parentUUID": "f38702fd-27fb-475d-b4a6-5a3c0a89c70a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "log in positive",
+              "fullTitle": "Log in log in positive",
+              "timedOut": null,
+              "duration": 906,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://test.iyikisordun.com/login.php');\ncy.get('[type=\"email\"]').type(correctEmail);\ncy.get('[type=\"password\"]').type(correctPass);\ncy.get('.btn').click();\ncy.get('.m-0').should('have.text', 'Dashboard');\ncy.url().should('include', 'index.php');",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://test.iyikisordun.com/login.php\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND test.iyikisordun.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://test.iyikisordun.com/login.php\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: getaddrinfo ENOTFOUND test.iyikisordun.com\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at http://localhost:1118/__cypress/runner/cypress_runner.js:163608:82\n    at visitFailedByErr (http://localhost:1118/__cypress/runner/cypress_runner.js:162912:12)\n    at http://localhost:1118/__cypress/runner/cypress_runner.js:163607:11\n    at tryCatcher (http://localhost:1118/__cypress/runner/cypress_runner.js:13022:23)\n    at Promise._settlePromiseFromHandler (http://localhost:1118/__cypress/runner/cypress_runner.js:10957:31)\n    at Promise._settlePromise (http://localhost:1118/__cypress/runner/cypress_runner.js:11014:18)\n    at Promise._settlePromise0 (http://localhost:1118/__cypress/runner/cypress_runner.js:11059:10)\n    at Promise._settlePromises (http://localhost:1118/__cypress/runner/cypress_runner.js:11135:18)\n    at _drainQueueStep (http://localhost:1118/__cypress/runner/cypress_runner.js:7729:12)\n    at _drainQueue (http://localhost:1118/__cypress/runner/cypress_runner.js:7722:9)\n    at Async.../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:1118/__cypress/runner/cypress_runner.js:7738:5)\n    at Async.drainQueues (http://localhost:1118/__cypress/runner/cypress_runner.js:7608:14)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:1118/__cypress/tests?p=cypress\\integration\\com.ezra\\day02\\04loginTest.js:113:8)\n\nFrom Node.js Internals:\n  Error: getaddrinfo ENOTFOUND test.iyikisordun.com\n      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)\n  ",
+                "diff": null
+              },
+              "uuid": "10fe6ee5-4ca4-4cdc-a6df-6a9488ec23f5",
+              "parentUUID": "f38702fd-27fb-475d-b4a6-5a3c0a89c70a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "ee105d3b-4372-4326-8745-e59227c325cb",
+            "10fe6ee5-4ca4-4cdc-a6df-6a9488ec23f5"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1755,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "mediumDate",
+        "overWrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

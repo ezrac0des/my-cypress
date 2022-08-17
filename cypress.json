@@ -1,4 +1,15 @@
 {
   "chromeWebSecurity": false,
-  "projectId": "w6gkkf"
+  "projectId": "w6gkkf",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "reportFilename": "[status]_[datetime]-[name]-report",
+    "timestamp": "mediumDate",
+    "overWrite": false,
+    "html": true,
+    "json": true,
+    "charts": true
+  },
+  "video": false
 }

@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 2,
+    "failures": -2,
+    "start": "2022-08-17T06:46:58.854Z",
+    "end": "2022-08-17T06:47:18.642Z",
+    "duration": 19788,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 66.66666666666666,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bcbb0a48-51a7-4d11-a177-270bc4ebd6c6",
+      "title": "",
+      "fullFile": "cypress/integration/com.ezra/day03/03checkboxes.js",
+      "file": "cypress/integration/com.ezra/day03/03checkboxes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "099b0775-1882-417e-b716-ba4d5621c61d",
+          "title": "checkboxes",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "checking single box",
+              "fullTitle": "checkboxes checking single box",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "62c75932-c965-4252-9217-0fd2109d501d",
+              "parentUUID": "099b0775-1882-417e-b716-ba4d5621c61d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checking all checkboxes",
+              "fullTitle": "checkboxes checking all checkboxes",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "c6c46b17-a031-4245-9bf1-73f62052df8d",
+              "parentUUID": "099b0775-1882-417e-b716-ba4d5621c61d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checking boxes with click",
+              "fullTitle": "checkboxes checking boxes with click",
+              "timedOut": null,
+              "duration": 16739,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://automationpractice.com/index.php');\ncy.get('.sf-with-ul').first().click();\n/*\ncy.click() can only be called on a single element. \nYour subject contained 19 elements. \nPass { multiple: true } if you want to serially click each element.\n*/\n//? {multiple: true} helps us to click more than one element\ncy.get(\"input[type='checkbox']\").click({\n  multiple: true\n}); //assert if all boxes are unchecked\ncy.get(\"input[type='checkbox']\").should('be.checked');\ncy.get(\"input[type='checkbox']\").first().should('be.checked'); //* should('have.class', 'text') -> checks if the element has the given class value\ncy.get(\"input[type='checkbox']\").first().parent().should('have.class', 'checked'); // click again to uncheck\ncy.get(\"input[type='checkbox']\").click({\n  multiple: true\n}); //assert if all boxes are unchecked\ncy.get(\"input[type='checkbox']\").should('not.be.checked'); //* should('have.id', 'text') -> checks if the element has the given id value\n//* should('have.name', 'text') -> checks if the element has the given name value",
+              "err": {},
+              "uuid": "35dc3fb4-c202-46af-baf3-8262e1fd8d74",
+              "parentUUID": "099b0775-1882-417e-b716-ba4d5621c61d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "35dc3fb4-c202-46af-baf3-8262e1fd8d74"
+          ],
+          "failures": [],
+          "pending": [
+            "62c75932-c965-4252-9217-0fd2109d501d",
+            "c6c46b17-a031-4245-9bf1-73f62052df8d"
+          ],
+          "skipped": [],
+          "duration": 16739,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "[status]_[datetime]-[name]-report",
+        "timestamp": "mediumDate",
+        "overWrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
