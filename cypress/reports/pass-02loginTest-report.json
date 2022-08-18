@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2022-08-17T06:47:25.270Z",
-    "end": "2022-08-17T06:47:29.555Z",
-    "duration": 4285,
+    "start": "2022-08-17T07:17:01.177Z",
+    "end": "2022-08-17T07:17:06.275Z",
+    "duration": 5098,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,49 +18,49 @@
   },
   "results": [
     {
-      "uuid": "783b0753-6b86-4b45-b25a-183ccbd9c8a7",
+      "uuid": "6739d4e8-e35d-4f0a-9754-7bf27f27f379",
       "title": "",
-      "fullFile": "cypress/integration/com.ezra/day04/02iframe.js",
-      "file": "cypress/integration/com.ezra/day04/02iframe.js",
+      "fullFile": "cypress/integration/com.ezra/day01/02loginTest.js",
+      "file": "cypress/integration/com.ezra/day01/02loginTest.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "eff72a96-09d8-405e-9857-aaa74fb56952",
-          "title": "iframes",
+          "uuid": "2713e46d-7e3a-4d3b-bc1b-55b6217b2282",
+          "title": "Crystal Key hotel",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "iframe",
-              "fullTitle": "iframes iframe",
+              "title": "Test 1",
+              "fullTitle": "Crystal Key hotel Test 1",
               "timedOut": null,
-              "duration": 2968,
+              "duration": 3079,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "cy.visit('https://the-internet.herokuapp.com/iframe');\ncy.get('h3').should('contain', 'Editor'); //* frameloaded('locator') -> locates and loads iframe\ncy.frameLoaded('#mce_0_ifr'); //* iframe() -> enters into the iframe\n//* find('htmlTag') -> finds the given HTML tag\n//* clear() -> clears a textbox\ncy.iframe().find('p').clear();\ncy.iframe().find('p').type('Hello World!');\ncy.get('.large-4 > div > a').should('contain.text', 'Elemental Selenium').click();\ncy.title();",
+              "code": "cy.visit(\"https://qa-environment.koalaresorthotels.com/\"); //login\n//1. way: using open selector playground on the test page\n//* get() -> gets an element using css selector\ncy.get(\"#navLogon > .nav-link\").click(); //2. way: using text attribute of the element\n//* contains() -> gets an element using text attribute\ncy.contains(\"Log in\").click();",
               "err": {},
-              "uuid": "f3f0b31a-a3d7-474f-8a62-fc05801a94df",
-              "parentUUID": "eff72a96-09d8-405e-9857-aaa74fb56952",
+              "uuid": "b3a63c88-954f-4361-ada6-992381e2aafa",
+              "parentUUID": "2713e46d-7e3a-4d3b-bc1b-55b6217b2282",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f3f0b31a-a3d7-474f-8a62-fc05801a94df"
+            "b3a63c88-954f-4361-ada6-992381e2aafa"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 2968,
+          "duration": 3079,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -83,7 +83,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "[status]_[datetime]-[name]-report",
+        "reportFilename": "[status]-[name]-report",
         "saveHtml": true,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -95,8 +95,7 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports",
-        "reportFilename": "[status]_[datetime]-[name]-report",
-        "timestamp": "mediumDate",
+        "reportFilename": "[status]-[name]-report",
         "overWrite": false,
         "html": true,
         "json": true,

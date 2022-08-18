@@ -2,6 +2,7 @@ describe('hooks', () => {
   //? runs first
   before(() => {
     console.log('before method');
+    cy.url().should('')
   });
 
   //? runs second

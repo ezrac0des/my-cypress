@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-08-17T06:44:24.505Z",
-    "end": "2022-08-17T06:44:28.214Z",
-    "duration": 3709,
+    "start": "2022-08-17T07:16:56.353Z",
+    "end": "2022-08-17T07:17:00.157Z",
+    "duration": 3804,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "aa1b1d32-6bf7-4d63-b27b-d049339af9bb",
+      "uuid": "d3a07c48-0618-45df-bd89-5acb48572eb4",
       "title": "",
       "fullFile": "cypress/integration/com.ezra/day01/01firstTest.js",
       "file": "cypress/integration/com.ezra/day01/01firstTest.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "392bfefe-7750-4125-b11b-5688ad8b64e1",
+          "uuid": "30f427af-0c9c-4bbd-9a8e-18627dbb50ae",
           "title": "My First Test",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "URL Test",
               "fullTitle": "My First Test URL Test",
               "timedOut": null,
-              "duration": 1177,
+              "duration": 1194,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "//it('name', ()=> {test body})\n//*visit(): to go to a website -> go to google website\ncy.visit(\"https://www.google.com/\"); //*url(): for testing url\n//?should('include', 'text') -> does it include the given text?\ncy.url().should(\"include\", \"google\");\ncy.url().should(\"include\", \"google\", \"com\");\ncy.url().should(\"include\", \"//\");\ncy.url().should(\"include\", \"\");",
               "err": {},
-              "uuid": "d619bc20-78c3-4bc7-ba8b-4bb5c7ae51f2",
-              "parentUUID": "392bfefe-7750-4125-b11b-5688ad8b64e1",
+              "uuid": "3b67b439-8313-4659-a31c-8c31ad5243e8",
+              "parentUUID": "30f427af-0c9c-4bbd-9a8e-18627dbb50ae",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Title Test",
               "fullTitle": "My First Test Title Test",
               "timedOut": null,
-              "duration": 621,
+              "duration": 629,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "cy.visit(\"https://www.google.com/\"); //*title(): for testing title\n//?should('eq', 'text') -> is it equals to the given text?\ncy.title().should(\"eq\", \"Google\");",
               "err": {},
-              "uuid": "94c4d369-2b84-477e-a136-68166df971b7",
-              "parentUUID": "392bfefe-7750-4125-b11b-5688ad8b64e1",
+              "uuid": "d4fe6ab3-a7be-41a7-9d35-27bb0726e10f",
+              "parentUUID": "30f427af-0c9c-4bbd-9a8e-18627dbb50ae",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d619bc20-78c3-4bc7-ba8b-4bb5c7ae51f2",
-            "94c4d369-2b84-477e-a136-68166df971b7"
+            "3b67b439-8313-4659-a31c-8c31ad5243e8",
+            "d4fe6ab3-a7be-41a7-9d35-27bb0726e10f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1798,
+          "duration": 1823,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -102,7 +102,7 @@
     "mochawesome": {
       "options": {
         "quiet": false,
-        "reportFilename": "[status]_[datetime]-[name]-report",
+        "reportFilename": "[status]-[name]-report",
         "saveHtml": true,
         "saveJson": true,
         "consoleReporter": "spec",
@@ -114,8 +114,7 @@
     "marge": {
       "options": {
         "reportDir": "cypress/reports",
-        "reportFilename": "[status]_[datetime]-[name]-report",
-        "timestamp": "mediumDate",
+        "reportFilename": "[status]-[name]-report",
         "overWrite": false,
         "html": true,
         "json": true,

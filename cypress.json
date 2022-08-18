@@ -4,8 +4,7 @@
   "reporter": "mochawesome",
   "reporterOptions": {
     "reportDir": "cypress/reports",
-    "reportFilename": "[status]_[datetime]-[name]-report",
-    "timestamp": "mediumDate",
+    "reportFilename": "[status]-[name]-report",
     "overWrite": false,
     "html": true,
     "json": true,
