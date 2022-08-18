@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-08-18T08:09:38.647Z",
+    "end": "2022-08-18T08:09:42.387Z",
+    "duration": 3740,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "58a4623a-92d6-43e8-8083-6350b8cc7054",
+      "title": "",
+      "fullFile": "cypress/integration/com.ezra/day01/01firstTest.js",
+      "file": "cypress/integration/com.ezra/day01/01firstTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "aa7ea6de-1ddc-4160-aa0a-0fa2fccad6a2",
+          "title": "My First Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "URL Test",
+              "fullTitle": "My First Test URL Test",
+              "timedOut": null,
+              "duration": 1199,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//it('name', ()=> {test body})\n//*visit(): to go to a website -> go to google website\ncy.visit(\"https://www.google.com/\"); //*url(): for testing url\n//?should('include', 'text') -> does it include the given text?\ncy.url().should(\"include\", \"google\");\ncy.url().should(\"include\", \"google\", \"com\");\ncy.url().should(\"include\", \"//\");\ncy.url().should(\"include\", \"\");",
+              "err": {},
+              "uuid": "3d7e78b6-b8bb-4128-90d9-9bb856c653c3",
+              "parentUUID": "aa7ea6de-1ddc-4160-aa0a-0fa2fccad6a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Title Test",
+              "fullTitle": "My First Test Title Test",
+              "timedOut": null,
+              "duration": 664,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.google.com/\"); //*title(): for testing title\n//?should('eq', 'text') -> is it equals to the given text?\ncy.title().should(\"eq\", \"Google\");",
+              "err": {},
+              "uuid": "64885824-f181-4110-aa0b-7248a06dd281",
+              "parentUUID": "aa7ea6de-1ddc-4160-aa0a-0fa2fccad6a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3d7e78b6-b8bb-4128-90d9-9bb856c653c3",
+            "64885824-f181-4110-aa0b-7248a06dd281"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1863,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "[status]-[name]-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

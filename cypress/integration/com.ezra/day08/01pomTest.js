@@ -1,10 +1,12 @@
+//! we have to import which classes we want to use with their path
 import HomePage from '../../pageObjectRepository/HomePage';
 import LoginPage from '../../pageObjectRepository/LoginPage';
 
 describe('Paylinn Bank', () => {
-  before(function () {
-    cy.fixture('creds').then(function (data) {
-      this.data = data;
+  let data;
+  before(() => {
+    cy.fixture('creds').then((fData) => {
+      data = fData;
     });
   });
 
@@ -15,15 +17,15 @@ describe('Paylinn Bank', () => {
 
     cy.visit('https://www.paylinn.com/');
 
-    homePage.getSigIn().click();
+    homePage.getSignIn().click();
 
-    loginPage.getUserNameBox().type(this.data.username);
+    loginPage.getUserNameBox().type(data.username);
 
     loginPage.getUserNameBox().should('have.value', 'User');
 
-    loginPage.getPasswordBox().type(this.data.password);
+    loginPage.getPasswordBox().type(data.password);
 
-    loginPage.getPasswordBox().should('have.attr', 'value', this.data.password);
+    loginPage.getPasswordBox().should('have.attr', 'value', data.password);
 
     loginPage.getLoginButton().click();
 
@@ -34,6 +36,6 @@ describe('Paylinn Bank', () => {
       .should('contain.text', 'Welcome')
       .and('contain.text', 'React')
       .and('contain.text', 'Logout')
-      .and('contain.text', this.data.username);
+      .and('contain.text', data.username);
   });
 });

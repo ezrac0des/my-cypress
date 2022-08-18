@@ -23,3 +23,4 @@ class LoginPage {
     return cy.get('.header__nav');
   }
 }
+export default LoginPage;
