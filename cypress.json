@@ -5,7 +5,7 @@
   "reporterOptions": {
     "reportDir": "cypress/reports",
     "reportFilename": "[status]-[name]-report",
-    "overWrite": false,
+    "overwrite": false,
     "html": true,
     "json": true,
     "charts": true
