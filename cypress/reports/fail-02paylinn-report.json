@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-08-19T01:52:31.779Z",
+    "end": "2022-08-19T01:52:52.104Z",
+    "duration": 20325,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "94f143f2-5442-4ad7-a5b5-98979a74a1a0",
+      "title": "",
+      "fullFile": "cypress/integration/smokeTest/02paylinn.js",
+      "file": "cypress/integration/smokeTest/02paylinn.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "07fdb421-5b79-4f55-8ba4-5b71e65df959",
+          "title": "Paylinn Bank",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "paylinn login test",
+              "fullTitle": "Paylinn Bank paylinn login test",
+              "timedOut": null,
+              "duration": 5123,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('https://www.paylinn.com/');\ncy.contains('Hello').click();\ncy.get(':nth-child(1) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('User');\ncy.get(':nth-child(2) > .MuiFormControl-root > .MuiInputBase-root > .MuiInputBase-input').type('user');\ncy.get('.MuiButtonBase-root').click(); //* should('contain.text', 'text') -> asserts the element contains the given text\ncy.get('.header__nav > :nth-child(1) > .header__lineOne').should('contain.text', 'Welcoem');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected '<span.header__lineOne>' to contain text 'Welcoem', but the text was 'Welcome'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<span.header__lineOne>' to contain text 'Welcoem', but the text was 'Welcome'\n    at Context.eval (https://www.paylinn.com/__cypress/tests?p=cypress\\integration\\smokeTest\\02paylinn.js:107:63)",
+                "diff": "- 'Welcome'\n+ 'Welcoem'\n"
+              },
+              "uuid": "bd8822d1-99e7-4d9e-bf84-1ed97fa4c987",
+              "parentUUID": "07fdb421-5b79-4f55-8ba4-5b71e65df959",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "bd8822d1-99e7-4d9e-bf84-1ed97fa4c987"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 5123,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "[status]-[name]-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "[status]-[name]-report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
