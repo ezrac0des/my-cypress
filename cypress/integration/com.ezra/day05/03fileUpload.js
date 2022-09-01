@@ -28,14 +28,14 @@ describe('file upload', () => {
       .attachFile(path3);
 
     //TODO SECOND WAY
-    cy.get('#filesToUpload').attachFile(path1, path2, path3);
+    cy.get('#filesToUpload').attachFile([path1, path2, path3]);
 
     //TODO THIRD WAY
-    cy.get('#filesToUpload').attachFile(
+    cy.get('#filesToUpload').attachFile([
       'wwdits.jpg',
       'wwditsa.png',
-      'wwditsb.jpg'
-    );
+      'wwditsb.jpg',
+    ]);
   });
 
   it('overriding a file name', () => {
