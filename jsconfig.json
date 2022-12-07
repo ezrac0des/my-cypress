@@ -1,3 +1,4 @@
+//! used for auto-completion of cypress commands on entire project
 {
   "include": ["./node_modules/cypress", "cypress/**/*.js"]
 }
